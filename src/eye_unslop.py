@@ -77,7 +77,7 @@ def is_idle() -> bool:
     if platform.system() == "Windows":
         return False
 
-        #TODO: Add Windows user idleness detection system.
+        #TODO: Add Windows user idleness detection system using key-logging.
     
     return False
 
@@ -146,7 +146,7 @@ def at_exit(exit_msg: str = "Program terminated successfully.") -> None:
         
     sbc.set_brightness(default_brightness)
     display_notification(exit_msg, title="Program terminated.")   
-    logging.log("[STOPPED]")
+    logging.info("[STOPPED]")
     
 def signal_handler(signum: int, frame: types.FrameType) -> None:
     """Ensure safe termination of the program to execute the exit notificaiton"""
