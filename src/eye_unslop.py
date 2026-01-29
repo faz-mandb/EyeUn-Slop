@@ -52,7 +52,7 @@ display_notification("Protecting your eyes from the background", title="EyeUn-Sl
     
 try:
     #Get user's current screen brightness
-    default_brightness = sbc.get_brightness()[0] 
+    default_brightness = sbc.get_brightness(display=0)[0] 
     
 except Exception as e:
     default_brightness = FALLBACK_BRIGHTNESS
