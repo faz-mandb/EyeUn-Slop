@@ -11,5 +11,7 @@ if not exist ".venv" (
     call .venv\Scripts\activate
 )
 
+.venv\Scripts\python.exe -c "import screen_brightness_control as sbc; print(sbc.get_brightness(display=0)[0])" > defaultbrightness.txt
+
 start /b "" .venv\Scripts\pythonw.exe src\eye_unslop.py > NUL 2>&1
 exit
